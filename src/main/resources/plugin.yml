@@ -1,0 +1,7 @@
+name: BukkitScalaTest
+description: Just a simple test plugin with Scala.
+version: 1
+author: Katho
+main: io.katho.plugin.Main
+commands:
+  ping:
