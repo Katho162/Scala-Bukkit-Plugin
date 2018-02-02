@@ -2,6 +2,7 @@ package io.katho.plugin.commands
 
 import org.bukkit.command.{Command, CommandExecutor, CommandSender}
 import org.bukkit.entity.Player
+import org.bukkit.ChatColor
 
 class Ping extends CommandExecutor {
 
@@ -15,10 +16,10 @@ class Ping extends CommandExecutor {
     val p : Player = sender.asInstanceOf[Player]
     if (command.getName.equals("ping")) {
         if (args.length == 0) {
-          p.sendMessage("§ePong!!")
+          p.sendMessage(s"${ChatColor.YELLOW}Pong!!")
           return true
         } else {
-          p.sendMessage("§c§lUSE: §c/ping")
+          p.sendMessage(s"${ChatColor.RED}${ChatColor.BOLD}USE: ${ChatColor.RED}/ping")
           return true
         }
     }
